@@ -60,7 +60,7 @@
                <q-btn
                 v-if="!locationLoading && locationSupported"
                 @click="getLocation"
-                  icon="eva-navigation-2-outline"
+                  icon="navigation"
                   dense
                   flat
                   round
@@ -105,9 +105,9 @@ export default defineComponent({
       locationLoading: false
     }
   },
-  compute:{
+  computed:{
     locationSupported(){
-      if('geolocation' in navigator) retur
+      if('geolocation' in navigator) return
       true
       return false
     }
